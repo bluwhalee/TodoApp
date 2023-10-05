@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#979797</color>
+    <color name="lightBrown">#8FC4A763</color>
+    <color name="lightGrey">#DADADA</color>
+    <color name="blue">#0D99FF</color>
+    <color name="dynmic_color">#0D99FF</color>
+    <color name="simple_back2">#CFCFCF</color>
+    <color name="navy">#29304D</color>
+    <color name="gold">#C4A763</color>
+    <color name="not_white">#ececec</color>
+
+
+    <color name="brunch">#5499CB</color>
+    <color name="burgers">#E27E46</color>
+    <color name="pizza">#C23E38</color>
+    <color name="bangels">#6EB895</color>
+    <color name="tacos">#597896</color>
+    <color name="donuts">#6DB9C7</color>
+    <color name="bar">#72202E</color>
+    <color name="light_blue">#3898F3</color>
+
+    <color name="grey2">#929498</color>
+    <color name="darkblue">#2573D5</color>
+    <color name="grey_background">#D4DAE4</color>
+    <color name="bluish_grey">#5D687E</color>
+    <color name="grey3">#4E5961</color>
+</resources>
