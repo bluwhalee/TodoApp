@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">TodoApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Type_task">Type your Task</string>
+    <string name="Type_email">Type your Email</string>
+    <string name="Type_pass">Type your Password</string>
+    <string name="reType_pass">Re-Type your Password</string>
+    <string name="no_account">Dont have an Account?</string>
+    <string name="already_account">Already have an Account?</string>
+    <string name="lets_go">Lets Go</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="todo_app">Todo App</string>
+    <string name="add_todo">Add Todo</string>
+
+
+
 </resources>

@@ -19,14 +19,8 @@ class AddTodoPopupFragment : DialogFragment() {
     private lateinit var listener: DialogAddButtton
     private var toDoData: ToDoData? = null
 
-    fun setListener(listener : DialogAddButtton)
-    {
-        this.listener = listener
-    }
-
     companion object{
         const val TAG = "AddTodoPopupFragment"
-
         @JvmStatic
         fun newInstance(taskId:String, task:String) = AddTodoPopupFragment().apply {
             arguments = Bundle().apply {
@@ -34,6 +28,10 @@ class AddTodoPopupFragment : DialogFragment() {
                 putString("task", task)
             }
         }
+    }
+    fun setListener(listener : DialogAddButtton)
+    {
+        this.listener = listener
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

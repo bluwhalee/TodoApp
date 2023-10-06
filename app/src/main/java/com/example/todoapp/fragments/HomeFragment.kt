@@ -30,15 +30,14 @@ class HomeFragment : Fragment(), DialogAddButtton, TaskAdapterInterface {
     private lateinit var navControl: NavController
     private lateinit var binding: FragmentHomeBinding
     private lateinit var databaseRef: DatabaseReference
-    private var popupFragment: AddTodoPopupFragment? = null
     private lateinit var adapter : TaskAdapter
     private lateinit var mList: MutableList<ToDoData >
+    private var popupFragment: AddTodoPopupFragment? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
-
         return binding.root
     }
 
@@ -48,13 +47,23 @@ class HomeFragment : Fragment(), DialogAddButtton, TaskAdapterInterface {
     }
 
     private fun init(view: View) {
+
+        initializeProps(view)
+        registerEvents()
+        setRecyclerView()
+        getDataFromFirebase()
+
+    }
+
+    private fun initializeProps(view: View) {
         navControl = Navigation.findNavController(view)
         auth = FirebaseAuth.getInstance()
         databaseRef = FirebaseDatabase.getInstance().reference
             .child("Tasks").child(auth.currentUser?.uid.toString())
 
-        registerEvents()
+    }
 
+    private fun setRecyclerView() {
         binding.recyclerView.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
@@ -63,9 +72,6 @@ class HomeFragment : Fragment(), DialogAddButtton, TaskAdapterInterface {
         adapter = TaskAdapter(mList)
         adapter.setListener(this)
         binding.recyclerView.adapter = adapter
-
-        getDataFromFirebase()
-
     }
 
     private fun getDataFromFirebase() {
@@ -81,7 +87,6 @@ class HomeFragment : Fragment(), DialogAddButtton, TaskAdapterInterface {
                 }
                 adapter.notifyDataSetChanged()
             }
-
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(context, error.message, Toast.LENGTH_SHORT).show()
             }
@@ -92,6 +97,7 @@ class HomeFragment : Fragment(), DialogAddButtton, TaskAdapterInterface {
         binding.btnAdd.setOnClickListener{
             if(popupFragment != null)
                 childFragmentManager.beginTransaction().remove(popupFragment!!).commit()
+
             popupFragment = AddTodoPopupFragment()
             popupFragment!!.setListener(this)
             popupFragment!!.show(

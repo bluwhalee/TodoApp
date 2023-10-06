@@ -21,32 +21,32 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Sign In"
-            android:textSize="50sp"
+            android:text="@string/sign_in"
+            android:textSize="@dimen/xxl_font"
             android:textStyle="bold"
             android:textColor="@color/burgers"
 
             />
         <androidx.cardview.widget.CardView
             android:id="@+id/email_cardView"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_layout"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/signin_textView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="@dimen/l_margin"
             android:layout_marginTop="@dimen/l_margin"
-            android:padding="10dp"
-            app:cardElevation="8dp"
+            android:padding="@dimen/s_padding"
+            app:cardElevation="@dimen/elevation"
             android:orientation="vertical"
             app:cardCornerRadius="@dimen/s_margin"
             >
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_tv_layout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="2dp"
+                android:layout_height="@dimen/m_radius"
+                app:boxStrokeWidth="@dimen/zero_layout"
+                app:boxStrokeWidthFocused="@dimen/two_layout"
                 app:hintEnabled="false"
 
                 >
@@ -54,7 +54,7 @@
                     android:id="@+id/email_tv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Type your Email"
+                    android:hint="@string/Type_email"
                     android:inputType="textEmailAddress"
 
                     />
@@ -62,24 +62,24 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/pass_cardView"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_layout"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/email_cardView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="@dimen/l_margin"
             android:layout_marginTop="@dimen/s_margin"
-            android:padding="10dp"
-            app:cardElevation="8dp"
+            android:padding="@dimen/s_padding"
+            app:cardElevation="@dimen/elevation"
             android:orientation="vertical"
             app:cardCornerRadius="@dimen/s_margin"
             >
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/pass_tv_layout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="2dp"
+                android:layout_height="@dimen/m_radius"
+                app:boxStrokeWidth="@dimen/zero_layout"
+                app:boxStrokeWidthFocused="@dimen/two_layout"
                 app:hintEnabled="false"
                 app:passwordToggleEnabled="true"
                 >
@@ -87,7 +87,7 @@
                     android:id="@+id/pass_tv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Type your Password"
+                    android:hint="@string/Type_pass"
                     android:inputType="textPassword"
 
                     />
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/pass_cardView"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Dont have an Account?"
+            android:text="@string/no_account"
             android:layout_marginStart="@dimen/l_margin"
             android:layout_marginTop="@dimen/s_margin"
             />
@@ -112,14 +112,14 @@
             app:layout_constraintTop_toTopOf="@id/already_textView"
             app:layout_constraintStart_toEndOf="@id/already_textView"
             android:textColor="@color/burgers"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:layout_marginStart="@dimen/xs_margin"
             />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/signin_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/already_textView"
