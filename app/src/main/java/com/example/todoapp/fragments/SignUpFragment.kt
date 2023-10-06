@@ -44,13 +44,13 @@ class SignUpFragment : Fragment() {
             navControl.navigate(R.id.action_signUpFragment_to_signInFragment)
         }
         binding.signupBtn.setOnClickListener{
-            val email = binding.emailTv.toString()
-            val pass = binding.passTv.toString()
-            val rePass = binding.repassTv.toString()
+            val email = binding.emailTv.text.toString()
+            val pass = binding.passTv.text.toString()
+            val rePass = binding.repassTv.text.toString()
 
             if(email.isNotEmpty()  && pass.isNotEmpty() && rePass.isNotEmpty())
             {
-                if(pass==rePass)
+                if(pass == rePass)
                 {
                     registerUser(email,pass)
                 }else {
@@ -66,6 +66,7 @@ class SignUpFragment : Fragment() {
                 navControl.navigate(R.id.action_signUpFragment_to_homeFragment)
             else
                 Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
+
 
         }
     }
